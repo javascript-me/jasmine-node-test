@@ -23,7 +23,7 @@ describe("Math from file Test with mock fs", function () {
             readFileSync: function (path, encoding) {
                 expect(path).toEqual(filename);
                 expect(encoding).toEqual('utf8');
-                return JSON.stringify({a:9, b:3000});
+                return JSON.stringify({a:7, b:6});
             }
         };
 
@@ -31,7 +31,7 @@ describe("Math from file Test with mock fs", function () {
 
         var math = require("../src/math-from-file");
 
-        expect(math.sumFromPropertyFile(filename)).toEqual(12);
+        expect(math.sumFromPropertyFile(filename)).toEqual(13);
 
         mockery.deregisterMock('fs');
     });
