@@ -1,7 +1,5 @@
 var mockery = require('mockery');
 
-console.log("===================2");
-
 describe("Math from file Test with mock fs", function () {
 
     beforeEach(function () {
